@@ -1,0 +1,189 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background-color: #232323;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .left-section {
+            padding: 20px;
+        }
+        
+        .title-hello {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        
+        .title-name {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #333;
+            margin-left: 10px;
+        }
+        
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: normal;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 120px;
+            gap: 10px;
+        }
+        
+        .icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+        }
+        
+        .icon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .github {
+            background-color: #f9ca24;
+        }
+        
+        .instagram {
+            background-color: #ff6b6b;
+        }
+        
+        .linkedin {
+            background-color: #7ed6df;
+        }
+        
+        .right-section {
+            position: relative;
+        }
+        
+        .profile-bg {
+            width: 400px;
+            height: 400px;
+
+            position: relative;
+        }
+        
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #6ab04c;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        
+        .square {
+            width: 300px;
+            height: 300px;
+            background-color: #7ed6df;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 250px solid #f9ca24;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(30deg);
+            z-index: 0;
+            opacity: 0.7;
+        }
+        
+        .profile-img {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            z-index: 2;
+            height: 450px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .left-section {
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+                margin-top: 50px;
+            }
+            
+            .profile-bg {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .profile-img {
+                height: 280px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .title-hello, .title-name {
+                font-size: 3rem;
+            }
+            
+            .profile-bg {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .profile-img {
+                height: 220px;
+            }
+        }
+    
